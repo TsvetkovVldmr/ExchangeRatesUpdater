@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeRatesUpdater", "ExchangeRatesUpdater\ExchangeRatesUpdater.csproj", "{94451640-BA94-4719-A899-AC3EB5D28E56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExchangeRatesUpdater", "ExchangeRatesUpdater\ExchangeRatesUpdater.csproj", "{94451640-BA94-4719-A899-AC3EB5D28E56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeRates", "ExchangeRates\ExchangeRates.csproj", "{34180CA3-CBE0-4E64-9AD4-FED80F311C93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{94451640-BA94-4719-A899-AC3EB5D28E56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94451640-BA94-4719-A899-AC3EB5D28E56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94451640-BA94-4719-A899-AC3EB5D28E56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34180CA3-CBE0-4E64-9AD4-FED80F311C93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34180CA3-CBE0-4E64-9AD4-FED80F311C93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34180CA3-CBE0-4E64-9AD4-FED80F311C93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34180CA3-CBE0-4E64-9AD4-FED80F311C93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
