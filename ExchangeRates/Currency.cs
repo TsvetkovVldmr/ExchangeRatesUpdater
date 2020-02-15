@@ -44,8 +44,8 @@ namespace ExchangeRates
             // Принимая вовнимание, что это сайт ЦБ и он стабилен,
             // предполагаю, что все параметры всегда корректны и не произвожу валидацию.
             CharCode = charCode;
-            Nominal = Convert.ToInt32(nominal, CultureInfo.InvariantCulture);
-            Value = Convert.ToSingle(value, CultureInfo.InvariantCulture);
+            Nominal = Convert.ToInt32(nominal, CultureInfo.CurrentCulture);
+            Value = Convert.ToSingle(value, CultureInfo.CurrentCulture);
         }
 
     }
