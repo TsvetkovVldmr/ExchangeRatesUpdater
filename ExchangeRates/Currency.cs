@@ -1,17 +1,52 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 namespace ExchangeRates
 {
-    public struct Currency
+    /// <summary>
+    /// Курс валюты
+    /// </summary>
+    public sealed class Currency
     {
-        public string ID { get; private set; }
-        public int NumCode { get; private set; }
+        /// <summary>
+        /// Дата, на которую указан курс
+        /// </summary>
+        public DateTime Date { get; private set; }
+        /// <summary>
+        /// Буквенный код валюты
+        /// </summary>
         public string CharCode { get; private set; }
+        /// <summary>
+        /// Номинал
+        /// </summary>
         public int Nominal { get; private set; }
-        public string Name { get; private set; }
-        public double Value { get; private set; }
+        /// <summary>
+        /// Курс валюты
+        /// </summary>
+        public float Value { get; private set; }
+
+        public Currency(DateTime date, string charCode, string nominal, string value)
+        {
+            Date = date;
+            SetValue(charCode, nominal, value);
+        }
+
+        /// <summary>
+        /// Установка свойств
+        /// </summary>
+        /// <param name="charCode">Буквенный код валюты</param>
+        /// <param name="nominal">Номинал</param>
+        /// <param name="value">Курс</param>
+        private void SetValue(string charCode, string nominal, string value)
+        {
+            // Принимая вовнимание, что это сайт ЦБ и он стабилен,
+            // предполагаю, что все параметры всегда корректны и не произвожу валидацию.
+            CharCode = charCode;
+            Nominal = Convert.ToInt32(nominal, CultureInfo.InvariantCulture);
+            Value = Convert.ToSingle(value, CultureInfo.InvariantCulture);
+        }
 
     }
 }
