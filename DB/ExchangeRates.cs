@@ -28,7 +28,7 @@ namespace DB
             {
                 RatesDate = p.Date,
                 Currency = p.CharCode,
-                Rate = (float) p.Value
+                Rate = p.Value
             }); 
         }
 
@@ -46,7 +46,7 @@ namespace DB
                 // поэтому проверка на ноль не реализована
                 RatesDate = p.Date,
                 Currency = p.CharCode,
-                Rate = (float) p.Value / p.Nominal
+                Rate = p.Value / p.Nominal
             });
         }
 
