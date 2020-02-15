@@ -56,19 +56,18 @@ namespace DB
         /// <param name="currencies"></param>
         public static void Update(List<Currency> currencies)
         {
+            // В методе нет никакого упоминания таблицы Валюты, потому что
+            // по условию задачи она уже создана.
             try
             {
                 using (Context context = new Context())
                 {
-                    if (!context.Database.CanConnect())
-                        throw new Exception("База данных недоступна");
-
                     var rates = GetExchangeRates(currencies);
                     context.AddRange(rates);
                     context.SaveChanges();
                 }
             }
-            catch (Microsoft.EntityFrameworkCore.DbUpdateException)
+            catch (DbUpdateException)
             {
                 throw;
             }
